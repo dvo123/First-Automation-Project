@@ -4,11 +4,11 @@ from time import sleep
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from pages.login_page import LoginPage
+class TestLogin:
+    def test_login(self, driver):
+        # setup driver
+        login_page = LoginPage(driver)
 
-def test_login(driver):
-    # setup driver
-    login_page = LoginPage(driver)
-
-    # login action
-    login_page.login("Admin", "admin123")
-    
+        # login action
+        login_page.login("Admin", "admin123")
+        login_page.click_upgrade()

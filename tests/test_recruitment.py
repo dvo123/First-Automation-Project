@@ -1,14 +1,12 @@
 from pages.login_page import LoginPage
 from pages.recruitment_page import RecruitmentPage
 
-def test_recruitment(driver):
-    # setup driver
-    login_page = LoginPage(driver)
-    recruitment_page = RecruitmentPage(driver)
+class TestRecruitment:
 
-    # login action
-    login_page.login("Admin", "admin123")
+    def test_recruitment(self, driver):
+        login_page = LoginPage(driver)
+        recruitment_page = RecruitmentPage(driver)
 
-    # button actions
-    recruitment_page.click_recruitment()
-    recruitment_page.click_search()
+        login_page.login("Admin", "admin123")
+        recruitment_page.click_recruitment()
+        recruitment_page.click_search()
