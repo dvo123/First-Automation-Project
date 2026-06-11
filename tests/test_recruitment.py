@@ -10,3 +10,4 @@ class TestRecruitment:
         login_page.login("Admin", "admin123")
         recruitment_page.click_recruitment()
         recruitment_page.click_search()
+        recruitment_page.click_vancancies()
