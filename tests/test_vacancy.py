@@ -26,9 +26,7 @@ class TestVacancy:
 
         print("Add Vacancy")
         vacancy_page.add_vacancy(
-            vacancy_name="Automation Tester For 11/06",
+            vacancy_name="Automation Tester For 11/07",
             description="Automation Test is Running",
-            hiring_manager="AtAZcsQrmUCHINU ffhvvXcJSUDHA WepKDUmDRqSELVA KUMAR",
-            number_of_positions="1"
+            number_of_positions="01"
         )
-        

@@ -15,6 +15,8 @@ class RecruitmentPage:
 
         self.vancancies_btn = (By.XPATH,"//a[text()='Vacancies']")
 
+        self.my_name = (By.XPATH,"//p [@class='oxd-userdropdown-name']")
+        
     def click_recruitment(self):
         self.driver.find_element(*self.recruitment_btn).click()
         return WebDriverWait(self.driver, 10).until(lambda d: d.find_element(*self.recruitment_btn))
@@ -24,3 +26,5 @@ class RecruitmentPage:
     def click_vancancies(self):
         self.driver.find_element(*self.vancancies_btn).click()
         return WebDriverWait(self.driver, 10).until(lambda d: d.find_element(*self.vancancies_btn))
+    def get_name(self):
+        return WebDriverWait(self.driver, 10).until(lambda d: d.find_element(*self.my_name)).text
