@@ -1,6 +1,8 @@
 from pages.login_page import LoginPage
 from pages.recruitment_page import RecruitmentPage
 from pages.vacancy_page import VacancyPage
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 class TestVacancy:
 
@@ -29,4 +31,9 @@ class TestVacancy:
             vacancy_name="Automation Tester For 11/07",
             description="Automation Test is Running",
             number_of_positions="01"
+        )
+
+        print("Recruitment")
+        WebDriverWait(self.driver, 6).until(
+            EC.visibility_of_element_located(recruitment_page.click_recruitment())
         )

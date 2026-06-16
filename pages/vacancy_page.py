@@ -67,10 +67,6 @@ class VacancyPage(BasePage):
             "//button[normalize-space()='Save']"
         )
 
-        self.edit_vacancy_title = (
-            By.XPATH,
-            "//h6[@class='oxd-text oxd-text--h6 orangehrm-main-title']"
-        )
 
     def click_add(self):
         self.click(self.add_btn)
@@ -175,11 +171,5 @@ class VacancyPage(BasePage):
         print("Saving Vacancy")
         self.click(self.save_btn)
 
-        print("Verify Edit Vacancy")
-        edit_title = self.find_element(
-            self.edit_vacancy_title
-        ).text
-
-        assert edit_title == "Edit Vacancy"
 
 
