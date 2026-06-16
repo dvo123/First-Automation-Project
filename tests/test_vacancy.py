@@ -37,3 +37,9 @@ class TestVacancy:
         WebDriverWait(self.driver, 6).until(
             EC.visibility_of_element_located(recruitment_page.click_recruitment())
         )
+        # Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+        # Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+
+        # scoop install allure
+        # pip install allure-pytest
+

@@ -1,6 +1,8 @@
 import pytest
 from selenium import webdriver
 from utils.config_reader import ConfigReader
+import allure
+from allure_commons.types import AttachmentType
 
 @pytest.fixture
 def driver():
@@ -16,3 +18,20 @@ def driver():
     yield driver
     # đóng trình duyệt sau khi test case hoàn thành
     driver.quit()
+
+@pytest.hookimpl(hookwrapper=True)
+def pytest_runtest_makereport(item):
+    # thực hiện test case và lấy kết quả
+    outcome = yield
+    report = outcome.get_result()
+
+    # nếu test case thất bại,
+    if report.when == "call" and report.failed:
+        
+        driver = item.funcargs.get("driver")
+        if driver:
+            allure.attach(
+                driver.get_screenshot_as_png(),
+                name="Failed Screenshot",
+                attachment_type=allure.attachment_type.PNG
+            )
