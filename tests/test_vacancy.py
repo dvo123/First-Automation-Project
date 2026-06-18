@@ -34,8 +34,9 @@ class TestVacancy:
         )
 
         print("Recruitment")
-        WebDriverWait(self.driver, 6).until(
-            EC.visibility_of_element_located(recruitment_page.click_recruitment())
+        # use the fixture 'driver' (not self.driver) and wait for the recruitment button locator
+        WebDriverWait(driver, 6).until(
+            EC.visibility_of_element_located(recruitment_page.recruitment_btn)
         )
         # Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
         # Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
