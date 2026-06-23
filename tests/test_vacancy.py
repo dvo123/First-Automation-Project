@@ -43,4 +43,5 @@ class TestVacancy:
 
         # scoop install allure
         # pip install allure-pytest
+        # pytest --alluredir=allure-results
 

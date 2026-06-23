@@ -1,0 +1,18 @@
+Login
+Recruitment
+Vacancies
+Add
+Verify
+Add Vacancy
+Entering Vacancy Name
+Selecting Job Title
+Clicking Job Title dropdown
+Selecting Job Title
+Entering Description
+Entering Hiring Manager
+Found manager: PETCHI Muthu S
+Entering Number Of Positions
+Setting Active = False
+Setting Publish = True
+Saving Vacancy
+Recruitment

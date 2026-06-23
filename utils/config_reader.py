@@ -22,6 +22,11 @@ class ConfigReader:
     def get_base_url():
         """Get the base URL from the configuration"""
         return ConfigReader.load_config()['base_url']
+    
+    @staticmethod
+    def get_base_api_url():
+        """Get the base API URL from the configuration"""
+        return ConfigReader.load_config()['base_api_url']
 
     @staticmethod
     def get_username():

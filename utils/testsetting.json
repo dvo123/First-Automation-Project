@@ -1,5 +1,6 @@
 {
     "base_url": "https://opensource-demo.orangehrmlive.com/",
+    "base_api_url": "https://dummyjson.com/",
     "credentials": {
         "username": "Admin",
         "password": "admin123"
@@ -7,5 +8,8 @@
     "timeouts": {
         "implicit": 10,
         "page_load": 30
+    },
+    "mark": {
+        "get": "get API"
     }
 }
