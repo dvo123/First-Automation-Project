@@ -20,3 +20,19 @@ class TestDummyJsonProductAPI:
         product = response.json()
         assert product['id'] == product_id
         assert product["title"] == 'Essence Mascara Lash Princess'
+
+    def test_create_product(self):
+        new_product_data = {
+            "title": "Test Product",
+            "price": 99.99,
+            "brand": "Test Brand",
+            "category": "test-category"
+        }
+        response = self.api_helper.post("products/add", data=new_product_data)
+
+        assert response.status_code == 200
+        created_product = response.json()
+        assert created_product["title"] == new_product_data["title"]
+        assert created_product["price"] == new_product_data["price"]
+        assert created_product["brand"] == new_product_data["brand"]
+        assert created_product["category"] == new_product_data["category"]
