@@ -36,13 +36,8 @@ jobs:
             allure-pytest \
             requests
 
-      - name: Show browser version
-        run: |
-          google-chrome --version
-          chromedriver --version
-
-      - name: Run tests
-        run: pytest -v tests/test_login.py
+      - name: Run smoke tests
+        run: pytest -v -m smoke
 
       - name: Upload Allure results
         if: always()

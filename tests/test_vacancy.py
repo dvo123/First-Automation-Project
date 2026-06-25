@@ -1,3 +1,4 @@
+import pytest
 from pages.login_page import LoginPage
 from pages.recruitment_page import RecruitmentPage
 from pages.vacancy_page import VacancyPage
@@ -6,7 +7,8 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class TestVacancy:
 
-    def test_recruitment(self, driver):
+    
+    def test_vacancy(self, driver):
         login_page = LoginPage(driver)
         recruitment_page = RecruitmentPage(driver)
         vacancy_page = VacancyPage(driver)

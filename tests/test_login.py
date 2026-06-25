@@ -6,6 +6,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 from pages.login_page import LoginPage
 from utils.config_reader import ConfigReader
 class TestLogin:
+
+    @pytest.mark.smoke
     def test_login(self, driver):
         # setup driver
         login_page = LoginPage(driver)
