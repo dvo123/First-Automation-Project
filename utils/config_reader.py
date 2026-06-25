@@ -19,6 +19,11 @@ class ConfigReader:
         return ConfigReader._config
 
     @staticmethod
+    def get_headless():
+        """Get headless setting from configuration"""
+        return ConfigReader.load_config()['headless']
+
+    @staticmethod
     def get_base_url():
         """Get the base URL from the configuration"""
         return ConfigReader.load_config()['base_url']
