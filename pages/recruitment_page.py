@@ -3,6 +3,7 @@ from selenium import webdriver
 from time import sleep
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from pages.login_page import LoginPage
 
 class RecruitmentPage:
@@ -18,8 +19,9 @@ class RecruitmentPage:
         self.my_name = (By.XPATH,"//p [@class='oxd-userdropdown-name']")
         
     def click_recruitment(self):
-        self.driver.find_element(*self.recruitment_btn).click()
-        return WebDriverWait(self.driver, 10).until(lambda d: d.find_element(*self.recruitment_btn))
+        WebDriverWait(self.driver, 15).until(
+            EC.element_to_be_clickable(self.recruitment_btn)
+        ).click()
     def click_search(self):
         self.driver.find_element(*self.search_btn).click()
         return WebDriverWait(self.driver, 10).until(lambda d: d.find_element(*self.search_btn))

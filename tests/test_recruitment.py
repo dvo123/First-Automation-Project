@@ -4,7 +4,6 @@ from pages.recruitment_page import RecruitmentPage
 
 class TestRecruitment:
 
-    @pytest.mark.smoke
     def test_recruitment(self, driver):
         login_page = LoginPage(driver)
         recruitment_page = RecruitmentPage(driver)

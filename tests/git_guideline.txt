@@ -1,0 +1,9 @@
+Step 1 : Tạo repo trên github
+Step 2: di chuyển vào thư mục chưa code và open Git bash here
+Step 3: git init
+Step 4: git remote add origin https://github.com/dvo123/First-Automation-Project.git
+Step 5: git status (để xem các file cần commit là gì)
+Step 6: git add "tên file"
+Step 7: git add
+Step 8: git commit -m "nội dung message"
+Step 9: git push

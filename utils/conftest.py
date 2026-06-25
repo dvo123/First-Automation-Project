@@ -1,4 +1,5 @@
 import pytest
+from requests import options
 from selenium import webdriver
 from utils.config_reader import ConfigReader
 import allure
@@ -10,10 +11,12 @@ def driver():
 
     if ConfigReader.get_headless():
         options.add_argument("--headless=new")
+        options.add_argument("--window-size=1920,1080")
 
     driver = webdriver.Chrome(options=options)
 
-    driver.maximize_window()
+    if not ConfigReader.get_headless():
+        driver.maximize_window()
     driver.implicitly_wait(time_to_wait=10)
     driver.get(ConfigReader.get_base_url())
 

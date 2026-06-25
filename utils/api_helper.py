@@ -1,5 +1,6 @@
 import logging
 from typing import Dict, Any, Optional
+from urllib import response
 import requests
 from utils.config_reader import ConfigReader
 # logger = logging.getLogger(__name__)
@@ -53,6 +54,22 @@ class APIHelper:
             json_data=data
         )
         return response
+    
+    def put(self, endpoint, data=None):
+        response = self.request(
+            method="PUT",
+            endpoint=endpoint,
+            json_data=data
+        )
+        return response
+
+    def delete(self, endpoint):
+        response = self.request(
+            method="DELETE",
+            endpoint=endpoint
+        )
+        return response
+
     def close(self):
         self.session.close()
 

@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class TestVacancy:
 
-    
+    @pytest.mark.smoke
     def test_vacancy(self, driver):
         login_page = LoginPage(driver)
         recruitment_page = RecruitmentPage(driver)
