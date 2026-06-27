@@ -47,3 +47,8 @@ class TestVacancy:
         # pip install allure-pytest
         # pytest --alluredir=allure-results
 
+        # python -m venv .venv
+        # .\.venv\Scripts\Activate
+        # git remote add origin https://github.com/dvo123/API-Automation-Project.git
+        # git branch -M main
+        # git push -u origin main
