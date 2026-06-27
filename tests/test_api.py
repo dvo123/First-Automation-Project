@@ -10,7 +10,6 @@ class TestDummyJsonProductAPI:
         yield
         self.api_helper.close_session()
 
-    @pytest.mark.get
     def test_get_product_by_id(self):
         product_id = 1
         # DummyJSON uses the plural 'products' path
